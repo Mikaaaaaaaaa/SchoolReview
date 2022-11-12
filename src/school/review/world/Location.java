@@ -13,11 +13,14 @@ public class Location
     private int x, y;
     private String className;
 
-    public Location(Planet planet, int x, int y, boolean changeable)
+    private boolean walkable;
+
+    public Location(Planet planet, int x, int y, boolean changeable, boolean walkable)
     {
         this.planet = planet;
         this.x = x;
         this.y = y;
+        this.walkable = walkable;
         CHANGEABLE = changeable;
     }
 
@@ -34,7 +37,7 @@ public class Location
             return this;
         } else
         {
-            return new Location(planet, x, y, true);
+            return new Location(planet, x, y, true, walkable);
         }
     }
 
@@ -57,18 +60,18 @@ public class Location
             return this;
         } else
         {
-            return new Location(planet, x, y, true);
+            return new Location(planet, x, y, true, walkable);
         }
     }
 
     public Location copyY(int y)
     {
-        return new Location(planet, x, y, false);
+        return new Location(planet, x, y, false, walkable);
     }
 
     public Location copyX(int x)
     {
-        return new Location(planet, x, y, false);
+        return new Location(planet, x, y, false, walkable);
     }
 
     public Planet getPlanet()
@@ -102,5 +105,15 @@ public class Location
     public boolean isChangeable()
     {
         return CHANGEABLE;
+    }
+
+    public boolean isWalkable()
+    {
+        return this.walkable;
+    }
+
+    public void setWalkable(boolean walkable)
+    {
+        this.walkable = walkable;
     }
 }

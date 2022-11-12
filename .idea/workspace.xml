@@ -4,55 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c01fdcc-ee7a-4faf-9948-6653358f3c11" name="Changes" comment="default">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SchoolReview.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/boden.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/gesetinKlasse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/gesteinBlau.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/gesteinRot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/huegel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/huegelKlasse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/marke.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/markeKlasse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/nachricht.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/nachrichtKlasse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/rover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/roverKlasse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project.greenfoot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/Planet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/entity/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/items/Hill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/items/Mark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/items/Rock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/GreenKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/KeyAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/Keyboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/actions/information/PlayerInformation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/actions/movement/AutomaticRunning.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/actions/movement/MoveDown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/actions/movement/MoveLeft.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/actions/movement/MoveRight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/actions/movement/MoveUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/movement/AllowedMovement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/movement/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/movement/PlayerMovement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/movement/automatic/Automatic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/text/AlertText.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/text/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/world/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/world/WorldGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/world/objects/ObjectGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/world/objects/WorldObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/world/objects/customs/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/school/review/world/objects/customs/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/standalone.properties" afterDir="false" />
+    <list default="true" id="6c01fdcc-ee7a-4faf-9948-6653358f3c11" name="Changes" comment="The algorithm has been reworked from scratch and now follows the fastest solution">
+      <change afterPath="$PROJECT_DIR$/src/school/review/algorithm/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/movement/automatic/Algorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/movement/automatic/AutomaticAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/movement/automatic/MarkHunter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/school/review/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/Planet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/school/review/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/school/review/keyboard/actions/movement/AutomaticRunning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/keyboard/actions/movement/AutomaticRunning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/school/review/movement/AllowedMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/movement/AllowedMovement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/school/review/movement/PlayerMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/movement/PlayerMovement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/school/review/movement/automatic/Automatic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/school/review/world/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/world/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/school/review/world/WorldGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/world/WorldGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/school/review/world/objects/WorldObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/world/objects/WorldObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/school/review/world/objects/customs/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/world/objects/customs/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/school/review/world/objects/customs/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/world/objects/customs/Rectangle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,28 +48,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "extract.method.default.visibility": "private",
-    "last_opened_file_path": "C:/Users/mikah/IdeaProjects/SchoolReview/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mikah/IdeaProjects/SchoolReview/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="school.review.algorithm" />
       <recent name="school.review.movement.keyboard" />
       <recent name="school.review.world" />
     </key>
@@ -109,7 +78,20 @@
       <recent name="C:\Users\mikah\IdeaProjects\SchoolReview\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Scenario">
+    <configuration name="Algorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="school.review.movement.automatic.Algorithm" />
+      <module name="SchoolReview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="school.review.movement.automatic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="greenfoot.export.GreenfootScenarioApplication" />
       <module name="SchoolReview" />
@@ -118,6 +100,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Algorithm" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -153,8 +140,18 @@
       <workItem from="1668195695430" duration="9446000" />
       <workItem from="1668205257576" duration="27000" />
       <workItem from="1668205294181" duration="2861000" />
-      <workItem from="1668209309627" duration="12820000" />
+      <workItem from="1668209309627" duration="13843000" />
+      <workItem from="1668245787248" duration="8822000" />
+      <workItem from="1668269801044" duration="9779000" />
     </task>
+    <task id="LOCAL-00001" summary="fix">
+      <created>1668255131019</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668255131019</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +170,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="default" />
-    <option name="LAST_COMMIT_MESSAGE" value="default" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="The algorithm has been reworked from scratch and now follows the fastest solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="The algorithm has been reworked from scratch and now follows the fastest solution" />
   </component>
 </project>

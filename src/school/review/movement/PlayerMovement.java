@@ -1,6 +1,7 @@
 package school.review.movement;
 
 import greenfoot.Greenfoot;
+import school.review.algorithm.Point;
 import school.review.entity.Player;
 import school.review.items.Mark;
 import school.review.world.Location;
@@ -10,8 +11,6 @@ public class PlayerMovement
 {
     private final Player PLAYER;
     private final AllowedMovement ALLOWED_MOVEMENT;
-
-    private boolean searchAround = false, found = false;
 
     /**
      * This class is responsible for the mobility and freedom of an actor.
@@ -33,11 +32,7 @@ public class PlayerMovement
     {
         for (int i = 0; i < steps; i++)
         {
-            int move = this.moveForward();
-            if(move < 0)
-            {
-                return move;
-            }
+            this.moveForward();
         }
         return 1;
     }
@@ -45,28 +40,22 @@ public class PlayerMovement
     /**
      * This method lets the player step forward if allowed.
      */
-    private int moveForward()
+    private void moveForward()
     {
-        if(found && searchAround)
+        if(!ALLOWED_MOVEMENT.isPlayerAllowedToMove(PLAYER))
         {
-            return -1;
+            return;
         }
-        int move = ALLOWED_MOVEMENT.isPlayerAllowedToMove(PLAYER);
-        if(move < 0) {
-            return move;
-        }
+
         if(PLAYER.getLocation().containsMark())
         {
-            found = true;
             PLAYER.sendMessage("You have found a mark!");
-            PLAYER.getWorld().removeObject(PLAYER.getWorld().getObjectsAt(PLAYER.getX(), PLAYER.getY(), Mark.class).get(0));
-            return move;
+            return;
         }
 
         Location location = Location.increaseLocation(PLAYER.getLocation(), PLAYER.getRotation(), 1);
         this.PLAYER.setLocation(location.getX(), location.getY());
         Greenfoot.delay(1);
-        return move;
     }
 
     /**
@@ -89,99 +78,10 @@ public class PlayerMovement
         }
     }
 
-    public int goToEnd(boolean end, boolean vertical)
+    public void move(Point point)
     {
-        int max = vertical ? PLAYER.getWorld().getHeight() : PLAYER.getWorld().getWidth();
-        int min = 0;
-        while (vertical ? (end ? PLAYER.getY() != max : PLAYER.getY() != min) : (end ? PLAYER.getX() != max : PLAYER.getX() != min))
-        {
-            setDirection(vertical ? (end ? Direction.DOWN_FRONT_SIDE : Direction.UP_FRONT_SIDE) :
-                    end ? Direction.RIGHT_SIDE : Direction.LEFT_SIDE);
-            int move = moveForward(1);
-            if (move < 0)
-            {
-                return move;
-            }
-        }
-        return 1;
+        PLAYER.setLocation(point.getX(), point.getY());
+        Greenfoot.delay(1);
     }
 
-    /**
-     * With this method the bot moves to the point x = 0 / y = 0
-     * So searching for the object can be done more easily due to exact knowledge of the bots position.
-     */
-    public void moveToLocation(int x, int y)
-    {
-        if(PLAYER.hillAvailable(Direction.UP_FRONT_SIDE))
-        {
-            goToEnd(true, true);
-        }
-        while (PLAYER.getX() != x || PLAYER.getY() != y)
-        {
-            if (this.PLAYER.hillAvailable(Direction.LEFT_SIDE))
-            {
-                setDirection(Direction.UP_FRONT_SIDE);
-                if (!this.PLAYER.hillAvailable(Direction.UP_FRONT_SIDE))
-                {
-                    moveForward(1);
-                    continue;
-                }
-
-                if (!this.PLAYER.hillAvailable(Direction.RIGHT_SIDE))
-                {
-
-                    while (!this.PLAYER.hillAvailable(Direction.RIGHT_SIDE) && this.PLAYER.hillAvailable(Direction.UP_FRONT_SIDE))
-                    {
-                        setDirection(Direction.RIGHT_SIDE);
-                        moveForward(1);
-                    }
-                    setDirection(Direction.UP_FRONT_SIDE);
-                    moveForward(1);
-                    continue;
-                }
-                System.out.println("I don't know what to do.");
-                continue;
-            }
-
-            boolean moveLeft = calculateDirection(x, y);
-
-            setDirection(moveLeft ? Direction.LEFT_SIDE : Direction.UP_FRONT_SIDE);
-            moveForward(1);
-        }
-    }
-
-    /**
-     * If the value is false, the bot has to move up
-     * If the value is true, the bot moves left
-     * g(x) = m * x - y
-     *
-     * @param x the current position x where the bot is.
-     * @param y the current position y where the bot is.
-     * @return whether the formula has been giving a negative, or positive outcome.
-     */
-    private boolean calculateDirection(int x, int y)
-    {
-        int botX = this.PLAYER.getX();
-        int botY = this.PLAYER.getY();
-
-        int xDifference = x - botX;
-        int yDifference = y - botY;
-
-        return Math.abs(xDifference) > Math.abs(yDifference);
-    }
-
-    /* 0 1 2 3 4 5 6 7 8 9 x     y
-     * o - - - - - - - - - -     0
-     * - - - - # # - # # - -     1
-     * - - # - - - - - - # -     2
-     * - - # - - - - - - # -     3
-     * - - - # - - # # # - -     4
-     * - - - - # # - - - - -     5
-     */
-
-
-    public void setSearchAround(boolean searchAround)
-    {
-        this.searchAround = searchAround;
-    }
 }

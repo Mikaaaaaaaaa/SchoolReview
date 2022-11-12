@@ -2,12 +2,10 @@ package school.review.world.objects.customs;
 
 import school.review.Planet;
 import school.review.items.Hill;
-import school.review.items.Rock;
 import school.review.world.Location;
 import school.review.world.objects.WorldObject;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -74,7 +72,8 @@ public class Circle implements WorldObject
     {
         if (containsLocation(x, y))
             return false;
-        CONTENT.add(new Location(getPlanet(), x, y, false).setClassName(getStart().getClassName()));
+        CONTENT.add(new Location(getPlanet(), x, y, false, false).setClassName(getStart().getClassName()));
+        planet.getLocation(x, y).setWalkable(false);
         planet.addObject(new Hill(), x, y);
         return true;
     }

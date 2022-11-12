@@ -7,7 +7,7 @@ import school.review.world.Location;
 public class AllowedMovement
 {
 
-    public int isPlayerAllowedToMove(Player player)
+    public boolean isPlayerAllowedToMove(Player player)
     {
         Location location = player.getLocation();
         if (location.getPlanet().isObjectInRange(location, 2,
@@ -15,14 +15,14 @@ public class AllowedMovement
                 Hill.class))
         {
             System.err.println("You must not run into any blocks!");
-            return -2;
+            return false;
         }
         if (!isDirectionInMap(location, Direction.toDirection(player.getRotation())))
         {
             System.err.println("You are not authorized to move outside the map!");
-            return -1;
+            return false;
         }
-        return 1;
+        return true;
     }
 
     public boolean isDirectionInMap(Location location, Direction direction)

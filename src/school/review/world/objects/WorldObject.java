@@ -2,6 +2,7 @@ package school.review.world.objects;
 
 import greenfoot.Actor;
 import school.review.Planet;
+import school.review.items.Hill;
 import school.review.items.Mark;
 import school.review.items.Rock;
 import school.review.text.Logger;
@@ -37,8 +38,9 @@ public interface WorldObject
             Actor actor = getPlanet().getActor(location.getX(), location.getY());
 
 
-            if (actor != null && actor instanceof Rock)
+            if (actor != null && actor instanceof Hill)
             {
+                getPlanet().getLocation(actor.getX(), actor.getY()).setWalkable(true);
                 getPlanet().removeObject(actor);
             } else
             {

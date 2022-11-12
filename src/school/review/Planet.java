@@ -12,7 +12,9 @@ import school.review.world.Location;
 import school.review.world.WorldGenerator;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Planet extends World
 {
@@ -23,6 +25,7 @@ public class Planet extends World
     private final List<Actor> ACTORS;
     private final List<Player> PLAYERS;
     private final List<Location> CONTENT;
+    private final List<Mark> MARKS;
     private final Location CENTER;
 
     /**
@@ -35,18 +38,20 @@ public class Planet extends World
         setPaintOrder(String.class, Player.class, Mark.class, Rock.class, Hill.class);
         Greenfoot.setSpeed(20);
 
+
         ACTORS = new ArrayList<>();
         CONTENT = new ArrayList<>();
+        MARKS = new ArrayList<>();
         PLAYERS = new ArrayList<>();
 
         generateContent(11, 11);
 
-        CENTER = new Location(this, getWidth() / 2, getHeight() / 2, false);
+        CENTER = new Location(this, getWidth() / 2, getHeight() / 2, false, true);
 
         WORLD_GENERATOR = new WorldGenerator(this);
-        WORLD_GENERATOR.calculateCircle(new Location(this, 4, 4, false), 3);
-        Player player = new Player(new Location(this, 0, 1, true));
-        this.addObject(new Mark(), 5, 5);
+        WORLD_GENERATOR.calculateCircle(new Location(this, 4, 4, false, false), 3);
+        Player player = new Player(new Location(this, 0, 1, true, true));
+        this.addMarker(5, 5);
         addPlayer(player, 0, 1);
     }
 
@@ -69,6 +74,10 @@ public class Planet extends World
             return;
         }
         ACTORS.add(object);
+        if(object instanceof Mark)
+        {
+            MARKS.add((Mark) object);
+        }
         super.addObject(object, x, y);
     }
 
@@ -78,6 +87,11 @@ public class Planet extends World
         try
         {
             super.removeObject(object);
+            this.ACTORS.remove(object);
+            if(object instanceof Mark)
+            {
+                this.MARKS.remove(object);
+            }
         } catch (IllegalAccessError ex)
         {
             System.out.println("The object has already been removed.");
@@ -95,10 +109,11 @@ public class Planet extends World
         {
             for (int y = 0; y < height; y++)
             {
-                CONTENT.add(new Location(this, x, y, false));
+                CONTENT.add(new Location(this, x, y, false, true));
             }
         }
     }
+
     public boolean isObjectInFront(Location location, int rotation, Direction direction, Class<? extends Actor> targetObject)
     {
         final int factor = 1;
@@ -141,7 +156,7 @@ public class Planet extends World
         for (int i = 0; i < range; i++)
         {
             if (isObjectNearby(xValue ? (add ? location.getX() + i : location.getX() - i) : location.getX(), xValue ?
-                            location.getY() : (add ? location.getY() + i : location.getY() - i), targetObject))
+                    location.getY() : (add ? location.getY() + i : location.getY() - i), targetObject))
             {
                 return true;
             }
@@ -150,6 +165,9 @@ public class Planet extends World
         return false;
     }
 
+    public void addMarker(int x, int y) {
+        this.addObject(new Mark(), x, y);
+    }
 
 
     public boolean existsLocation(int x, int y)
@@ -177,4 +195,13 @@ public class Planet extends World
         return CONTENT;
     }
 
+    public boolean isWalkable(int x, int y)
+    {
+        return getLocation(x, y).isWalkable();
+    }
+
+    public List<Mark> getMarks()
+    {
+        return MARKS;
+    }
 }

@@ -40,15 +40,15 @@ public class Rectangle implements WorldObject
         {
             this.getPlanet().addObject(new Hill(), x, getLocation().getY());
             this.getPlanet().addObject(new Hill(), x, getHeight());
-            this.getContent().add(new Location(getPlanet(), x, getLocation().getY(), false).setClassName("rock"));
-            this.getContent().add(new Location(getPlanet(), x, getHeight(), false).setClassName("rock"));
+            this.getContent().add(new Location(getPlanet(), x, getLocation().getY(), false, false).setClassName("rock"));
+            this.getContent().add(new Location(getPlanet(), x, getHeight(), false, false).setClassName("rock"));
         }
         for (int y = getLocation().getY(); y < (getLocation().getY() + getHeight()-1); y++)
         {
             this.getPlanet().addObject(new Hill(), getLocation().getX(), y);
             this.getPlanet().addObject(new Hill(), getWidth(), y);
-            this.getContent().add(new Location(getPlanet(), getLocation().getX(), y, false).setClassName("rock"));
-            this.getContent().add(new Location(getPlanet(), getWidth(), y, false).setClassName("rock"));
+            this.getContent().add(new Location(getPlanet(), getLocation().getX(), y, false, false).setClassName("rock"));
+            this.getContent().add(new Location(getPlanet(), getWidth(), y, false, false).setClassName("rock"));
         }
 
         return this;

@@ -3,12 +3,10 @@ package school.review.entity;
 import greenfoot.Actor;
 import greenfoot.World;
 import school.review.items.Hill;
-import school.review.items.Mark;
-import school.review.items.Rock;
 import school.review.keyboard.Keyboard;
 import school.review.movement.Direction;
 import school.review.movement.PlayerMovement;
-import school.review.movement.automatic.Automatic;
+import school.review.movement.automatic.AutomaticAlgorithm;
 import school.review.world.Location;
 
 public class Player extends Actor
@@ -18,7 +16,7 @@ public class Player extends Actor
 
     private final Location LOCATION;
 
-    private final Automatic AUTOMATIC;
+    private final AutomaticAlgorithm AUTOMATIC;
 
     /**
      * When this constructor is called, an object class Player is created and initialized.
@@ -29,7 +27,7 @@ public class Player extends Actor
         this.ACTOR_MOVEMENT = new PlayerMovement(this);
         this.KEY_BOARD = new Keyboard(this);
         this.LOCATION = location;
-        this.AUTOMATIC = new Automatic(this);
+        this.AUTOMATIC = new AutomaticAlgorithm(this);
     }
 
     public void act()
@@ -46,27 +44,27 @@ public class Player extends Actor
     {
         int rot = getRotation();
 
-        if(getOffset(direction, rot, 0,270,90, 1,0))
+        if (getOffset(direction, rot, 0, 270, 90, 1, 0))
         {
             return true;
         }
 
-        if(getOffset(direction, rot, 180,90,270, -1,0))
+        if (getOffset(direction, rot, 180, 90, 270, -1, 0))
         {
             return true;
         }
 
-        if(getOffset(direction, rot, 90,0,180, 0,1))
+        if (getOffset(direction, rot, 90, 0, 180, 0, 1))
         {
             return true;
         }
 
-        if(getOffset(direction, rot, 270,180,0, 0,-1))
+        if (getOffset(direction, rot, 270, 180, 0, 0, -1))
         {
             return true;
         }
 
-        if(direction.equals(Direction.DOWN_FRONT_SIDE))
+        if (direction.equals(Direction.DOWN_FRONT_SIDE))
         {
             System.err.println("Befehl nicht korrekt!");
         }
@@ -74,12 +72,11 @@ public class Player extends Actor
         return false;
     }
 
-    private boolean getOffset(Direction direction, int rotation, int checkRot1, int checkRot2, int checkRot3, int dx,
-                              int dy)
+    private boolean getOffset(Direction direction, int rotation, int checkRot1, int checkRot2, int checkRot3, int dx, int dy)
     {
-        if (direction.equals(Direction.UP_FRONT_SIDE) && rotation== checkRot1 || direction.equals(Direction.RIGHT_SIDE) && rotation==checkRot2 || direction.equals(Direction.LEFT_SIDE) && rotation==checkRot3)
+        if (direction.equals(Direction.UP_FRONT_SIDE) && rotation == checkRot1 || direction.equals(Direction.RIGHT_SIDE) && rotation == checkRot2 || direction.equals(Direction.LEFT_SIDE) && rotation == checkRot3)
         {
-            if(getOneObjectAtOffset(dx, dy, Hill.class)!=null && ((Hill)getOneObjectAtOffset(dx, dy,Hill.class)).getSlope() >30)
+            if (getOneObjectAtOffset(dx, dy, Hill.class) != null && ((Hill) getOneObjectAtOffset(dx, dy, Hill.class)).getSlope() > 30)
             {
                 return true;
             }
@@ -119,7 +116,7 @@ public class Player extends Actor
         return ACTOR_MOVEMENT;
     }
 
-    public Automatic getAutomatic()
+    public AutomaticAlgorithm getAutomatic()
     {
         return AUTOMATIC;
     }

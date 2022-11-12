@@ -30,7 +30,7 @@ public class WorldGenerator
         OBJECT_GENERATOR.get(Rectangle.class).setPlanet(getPlanet())
                 .setHeight(height)
                 .setWidth(width)
-                .setLocation(new Location(location.getPlanet(), location.getX(), location.getY(), false)
+                .setLocation(new Location(location.getPlanet(), location.getX(), location.getY(), false, false)
                         .setClassName("hill"))
                 .generateBorder()
                 .addGap();
@@ -40,7 +40,7 @@ public class WorldGenerator
     {
         OBJECT_GENERATOR.get(Circle.class)
                 .setPlanet(getPlanet())
-                .setStart(new Location(location.getPlanet(), location.getX(), location.getY(), false)
+                .setStart(new Location(location.getPlanet(), location.getX(), location.getY(), false, false)
                         .setClassName("circle"))
                 .setRadius(radius)
                 .generateBorder()
