@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6c01fdcc-ee7a-4faf-9948-6653358f3c11" name="Changes" comment="default">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SchoolReview.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/boden.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/gesetinKlasse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/gesteinBlau.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/gesteinRot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/huegel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/huegelKlasse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/marke.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/markeKlasse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/nachricht.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/nachrichtKlasse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/rover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/roverKlasse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project.greenfoot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/Planet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/entity/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/items/Hill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/items/Mark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/items/Rock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/GreenKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/KeyAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/Keyboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/actions/information/PlayerInformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/actions/movement/AutomaticRunning.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/actions/movement/MoveDown.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/actions/movement/MoveLeft.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/actions/movement/MoveRight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/keyboard/actions/movement/MoveUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/movement/AllowedMovement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/movement/Direction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/movement/PlayerMovement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/movement/automatic/Automatic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/text/AlertText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/text/Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/world/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/world/WorldGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/world/objects/ObjectGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/world/objects/WorldObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/world/objects/customs/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/school/review/world/objects/customs/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/standalone.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/school/review/world/WorldGenerator.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GaEEn5l0cvnglG1bTbmWfON8Tb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "extract.method.default.visibility": "private",
+    "last_opened_file_path": "C:/Users/mikah/IdeaProjects/SchoolReview/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="school.review.movement.keyboard" />
+      <recent name="school.review.world" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mikah\IdeaProjects\SchoolReview\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Scenario" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="greenfoot.export.GreenfootScenarioApplication" />
+      <module name="SchoolReview" />
+      <option name="VM_PARAMETERS" value="--module-path=&quot;C:\Program Files\Greenfoot\lib\javafx\lib&quot; --add-modules=javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6c01fdcc-ee7a-4faf-9948-6653358f3c11" name="Changes" comment="" />
+      <created>1666618187091</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666618187091</updated>
+      <workItem from="1666618188240" duration="15504000" />
+      <workItem from="1666636963775" duration="3000" />
+      <workItem from="1666729062203" duration="6066000" />
+      <workItem from="1666779418269" duration="1892000" />
+      <workItem from="1666808122336" duration="3389000" />
+      <workItem from="1666894173315" duration="2041000" />
+      <workItem from="1666980253686" duration="991000" />
+      <workItem from="1666987898567" duration="165000" />
+      <workItem from="1666990430564" duration="752000" />
+      <workItem from="1667132111340" duration="3589000" />
+      <workItem from="1667156510132" duration="8362000" />
+      <workItem from="1667213881511" duration="6574000" />
+      <workItem from="1667232815651" duration="1531000" />
+      <workItem from="1667412120962" duration="1435000" />
+      <workItem from="1667464458048" duration="5811000" />
+      <workItem from="1667502594767" duration="3350000" />
+      <workItem from="1667511387605" duration="18000" />
+      <workItem from="1667834196154" duration="2613000" />
+      <workItem from="1667842241150" duration="6771000" />
+      <workItem from="1668012748046" duration="37000" />
+      <workItem from="1668020452169" duration="188000" />
+      <workItem from="1668178188607" duration="486000" />
+      <workItem from="1668191577565" duration="3942000" />
+      <workItem from="1668195695430" duration="9446000" />
+      <workItem from="1668205257576" duration="27000" />
+      <workItem from="1668205294181" duration="2861000" />
+      <workItem from="1668209309627" duration="12820000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="default" />
+    <option name="LAST_COMMIT_MESSAGE" value="default" />
+  </component>
+</project>
