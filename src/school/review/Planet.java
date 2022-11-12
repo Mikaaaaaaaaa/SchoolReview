@@ -46,7 +46,7 @@ public class Planet extends World
         WORLD_GENERATOR = new WorldGenerator(this);
         WORLD_GENERATOR.calculateCircle(new Location(this, 4, 4, false), 3);
         Player player = new Player(new Location(this, 0, 1, true));
-        this.addObject(new Mark(), 1, 1);
+        this.addObject(new Mark(), 5, 5);
         addPlayer(player, 0, 1);
     }
 
