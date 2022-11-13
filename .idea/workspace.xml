@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c01fdcc-ee7a-4faf-9948-6653358f3c11" name="Changes" comment="fix">
+      <change afterPath="$PROJECT_DIR$/video/2022-11-13 14-32-23_Trim.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/school/review/items/Mark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/items/Mark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/school/review/movement/PlayerMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/movement/PlayerMovement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/school/review/movement/automatic/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/movement/automatic/Algorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/school/review/movement/automatic/AutomaticAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/movement/automatic/AutomaticAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/school/review/movement/automatic/MarkHunter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/movement/automatic/MarkHunter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/school/review/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/school/review/world/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/school/review/world/Location.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +65,9 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mikah\IdeaProjects\SchoolReview\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mikah\IdeaProjects\SchoolReview\video" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Scenario">
@@ -136,7 +136,7 @@
       <workItem from="1668245787248" duration="8822000" />
       <workItem from="1668269801044" duration="9799000" />
       <workItem from="1668341636326" duration="2648000" />
-      <workItem from="1668344496136" duration="1164000" />
+      <workItem from="1668344496136" duration="2063000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1668255131019</created>
@@ -152,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668279721748</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix">
+      <created>1668345685611</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668345685611</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

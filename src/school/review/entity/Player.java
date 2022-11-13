@@ -101,9 +101,27 @@ public class Player extends Actor
     @Override
     public void setLocation(int x, int y)
     {
+
+        if(x > getX())
+        {
+            setRotation(Direction.RIGHT_SIDE.getDirection());
+        } else if(x < getX())
+        {
+            setRotation(Direction.LEFT_SIDE.getDirection());
+        }
+
+        if(y > getY())
+        {
+            setRotation(Direction.DOWN_FRONT_SIDE.getDirection());
+        } else if(y < getY())
+        {
+            setRotation(Direction.UP_FRONT_SIDE.getDirection());
+        }
+
         LOCATION.setX(x);
         LOCATION.setY(y);
         super.setLocation(x, y);
+
     }
 
     public Location getLocation()

@@ -1,6 +1,7 @@
 package school.review.world;
 
 import school.review.Planet;
+import school.review.algorithm.Point;
 import school.review.items.Mark;
 import school.review.movement.Direction;
 
