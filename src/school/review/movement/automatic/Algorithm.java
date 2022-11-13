@@ -21,6 +21,8 @@ public class Algorithm
         return map[point.getY()][point.getX()] == 0;
     }
 
+    // The video shows what this project can do.
+
     /**
      * This method finds the path to the destination.
      * @param map The map of the planet.
@@ -51,26 +53,23 @@ public class Algorithm
     public List<Point> findPath(int[][] map, Point start, Point end)
     {
         boolean finished = false;
-        List<Point> used = new ArrayList<>();
-        used.add(start);
+
+        List<Point> existingWays = new ArrayList<>();
+
+        existingWays.add(start);
+
         while (!finished)
         {
-            List<Point> newOpen = new ArrayList<>();
-            for (int i = 0; i < used.size(); ++i)
+            List<Point> points = new ArrayList<>();
+
+            for (Point point : existingWays)
             {
-                Point point = used.get(i);
-                for (Point neighbor : findNeighbors(map, point))
-                {
-                    if (!used.contains(neighbor) && !newOpen.contains(neighbor))
-                    {
-                        newOpen.add(neighbor);
-                    }
-                }
+                points.addAll(findRoutes(existingWays, map, point, end));
             }
 
-            for (Point point : newOpen)
+            for (Point point : points)
             {
-                used.add(point);
+                existingWays.add(point);
                 if (end.equals(point))
                 {
                     finished = true;
@@ -78,10 +77,32 @@ public class Algorithm
                 }
             }
 
-            if (!finished && newOpen.isEmpty())
+            if (!finished && points.isEmpty())
                 return null;
         }
+        return improveOrder(existingWays);
+    }
 
+    public List<Point> findRoutes(List<Point> existingWays, int[][] map, Point start, Point end)
+    {
+        List<Point> points = new ArrayList<>();
+        for (Point point : findNeighbors(map, start))
+        {
+            if(!points.contains(point) && !existingWays.contains(point))
+            {
+                points.add(point);
+            }
+        }
+        return points;
+    }
+
+    /**
+     * This method brings the pure sequence of the path into order.
+     * @param used The list of points.
+     * @return The list in order.
+     */
+    private List<Point> improveOrder(List<Point> used)
+    {
         List<Point> path = new ArrayList<>();
         Point point = used.get(used.size() - 1);
         while (point.getPrevious() != null)

@@ -37,7 +37,7 @@ public class MarkHunter
         }
 
 
-        PLAYER.getAutomatic().start(startingPosition);
+        //PLAYER.getAutomatic().start(startingPosition);
 
 
         int x = PLAYER.getX();
