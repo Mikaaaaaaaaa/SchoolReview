@@ -64,7 +64,7 @@ public class Algorithm
 
             for (Point point : existingWays)
             {
-                points.addAll(findRoutes(existingWays, map, point, end));
+                points.addAll(findPoints(existingWays, map, point, end));
             }
 
             for (Point point : points)
@@ -83,7 +83,15 @@ public class Algorithm
         return improveOrder(existingWays);
     }
 
-    public List<Point> findRoutes(List<Point> existingWays, int[][] map, Point start, Point end)
+    /**
+     * This method finds points in the map to the destination.
+     * @param existingWays The existing ways.
+     * @param map The map of the planet.
+     * @param start The starting point.
+     * @param end The destination point.
+     * @return A list of points to the destination.
+     */
+    public List<Point> findPoints(List<Point> existingWays, int[][] map, Point start, Point end)
     {
         List<Point> points = new ArrayList<>();
         for (Point point : findNeighbors(map, start))
