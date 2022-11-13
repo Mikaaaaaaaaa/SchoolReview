@@ -1,2 +1,4 @@
 # SchoolReview
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nDXaJe7J4es" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=nTQUwghvy5Q" target="_blank">
+ <img src="http://img.youtube.com/vi/nDXaJe7J4es/hqdefault.jpg" alt="Watch the video" width="240" height="180" border="10" />
+</a>
