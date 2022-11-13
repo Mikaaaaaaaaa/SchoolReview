@@ -38,7 +38,7 @@ public class AutomaticAlgorithm
 
         if (route == null)
         {
-            System.out.println("No route found");
+            System.out.println("There is no route to the destination.");
             return;
         }
         handle(route, true);
