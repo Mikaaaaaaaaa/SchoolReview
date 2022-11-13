@@ -95,11 +95,6 @@ public class Location
                 };
     }
 
-    public boolean containsMark()
-    {
-        return getPlanet().getObjectsAt(getX(), getY(), Mark.class).stream().anyMatch(o -> o instanceof Mark);
-    }
-
 
 
     public boolean isChangeable()

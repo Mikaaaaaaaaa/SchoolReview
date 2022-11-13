@@ -3,7 +3,6 @@ package school.review.movement;
 import greenfoot.Greenfoot;
 import school.review.algorithm.Point;
 import school.review.entity.Player;
-import school.review.items.Mark;
 import school.review.world.Location;
 
 
@@ -28,13 +27,12 @@ public class PlayerMovement
      *
      * @param steps is the number of times the method should be executed
      */
-    public int moveForward(int steps)
+    public void moveForward(int steps)
     {
         for (int i = 0; i < steps; i++)
         {
             this.moveForward();
         }
-        return 1;
     }
 
     /**
@@ -44,12 +42,6 @@ public class PlayerMovement
     {
         if(!ALLOWED_MOVEMENT.isPlayerAllowedToMove(PLAYER))
         {
-            return;
-        }
-
-        if(PLAYER.getLocation().containsMark())
-        {
-            PLAYER.sendMessage("You have found a mark!");
             return;
         }
 

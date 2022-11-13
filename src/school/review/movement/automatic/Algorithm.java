@@ -9,36 +9,11 @@ import java.util.List;
 public class Algorithm
 {
 
-    public static void main(String[] args)
-    {
-        int[][] map = {
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0},
-                {0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0},
-                {0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0},
-                {0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0},
-                {0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0},
-                {0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-        };
-
-        Point start = new Point(0, 0, null);
-        Point end = new Point(5, 5, null);
-        Algorithm algorithm = new Algorithm();
-        List<Point> path = algorithm.findPath(map, start, end);
-        if (path != null)
-        {
-            for (Point point : path)
-            {
-                System.out.println(point);
-            }
-        } else
-            System.out.println("No path found");
-    }
-
+    /**
+     * This method checks whether the player is moving outside the border.
+     * @param map The map of the planet.
+     * @return The path to the destination.
+     */
     public boolean isWalkable(int[][] map, Point point)
     {
         if (point.getY() < 0 || point.getY() > map.length - 1) return false;
@@ -46,6 +21,12 @@ public class Algorithm
         return map[point.getY()][point.getX()] == 0;
     }
 
+    /**
+     * This method finds the path to the destination.
+     * @param map The map of the planet.
+     * @param point The starting point.
+     * @return The path to the destination.
+     */
     public List<Point> findNeighbors(int[][] map, Point point)
     {
         List<Point> neighbors = new ArrayList<>();
@@ -60,6 +41,13 @@ public class Algorithm
         return neighbors;
     }
 
+    /**
+     * This method finds the path to the destination.
+     * @param map The map of the planet.
+     * @param start The starting point.
+     * @param end The destination point.
+     * @return The path to the destination.
+     */
     public List<Point> findPath(int[][] map, Point start, Point end)
     {
         boolean finished = false;
@@ -104,6 +92,11 @@ public class Algorithm
         return path;
     }
 
+    /**
+     * This method converts the planet map to a 2D array.
+      * @param planet The planet.
+     * @return The map of the planet as a 2D array.
+     */
     public int[][] convertPlanetToMap(Planet planet)
     {
         int[][] map = new int[planet.getHeight()][planet.getWidth()];

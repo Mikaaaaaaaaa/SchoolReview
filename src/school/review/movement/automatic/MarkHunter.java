@@ -11,14 +11,18 @@ public class MarkHunter
     private final Player PLAYER;
     private final Planet PLANET;
 
+    /**
+     * Creates a logical execution of the task using the algorithm
+     * @param player The player to create the algorithm for.
+     */
     public MarkHunter(Player player)
     {
         PLAYER = player;
         PLANET = player.getLocation().getPlanet();
     }
 
-    /*
-     * This method is responsible for the movement of the player.
+    /**
+     * This method finds the nearest mark.
      */
     public void hunt()
     {
@@ -29,7 +33,7 @@ public class MarkHunter
             Mark mark = PLANET.getMarks().get(i);
 
             PLAYER.getAutomatic().start(new Point(mark.getX(), mark.getY(), null));
-            removeMark(PLAYER.getX(), PLAYER.getY());
+            PLANET.removeObject(PLANET.getObjectsAt(PLAYER.getX(), PLAYER.getY(), Mark.class).get(0));
         }
 
 
@@ -39,11 +43,6 @@ public class MarkHunter
         int x = PLAYER.getX();
         int y = PLAYER.getY();
         PLAYER.getLocation().getPlanet().addMarker(x, y);
-    }
-
-    private void removeMark(int x, int y)
-    {
-        PLANET.removeObject(PLANET.getObjectsAt(x, y, Mark.class).get(0));
     }
 
 }
